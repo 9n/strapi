@@ -38,6 +38,13 @@
       "dominant": true,
       "collection": "tag",
       "via": "linkedArticles"
+    },
+    "ingredients": {
+      "type": "group",
+      "group": "ingredients",
+      "repeatable": true,
+      "min": 5,
+      "max": 7
     }
   }
 }

@@ -2,21 +2,27 @@ type Articles {
   id: ID!
   created_at: DateTime!
   updated_at: DateTime!
-  content2: String
   title: String
+  content: String
+  published: Boolean
+  value: Int
   image: UploadFile
   mainTag: Tag
+  ingredients: String
   linkedTags(sort: String, limit: Int, start: Int, where: JSON): [Tag]
   manyTags(sort: String, limit: Int, start: Int, where: JSON): [Tag]
 }
 
 input ArticlesInput {
-  content2: String
   title: String
+  content: String
+  published: Boolean
+  value: Int
   image: ID
   mainTag: ID
   linkedTags: [ID]
   manyTags: [ID]
+  ingredients: String
 }
 
 input createArticlesInput {
@@ -105,12 +111,15 @@ type deleteUserPayload {
 }
 
 input editArticlesInput {
-  content2: String
   title: String
+  content: String
+  published: Boolean
+  value: Int
   image: ID
   mainTag: ID
   linkedTags: [ID]
   manyTags: [ID]
+  ingredients: String
 }
 
 input editFileInput {
